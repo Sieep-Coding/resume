@@ -249,12 +249,19 @@ body {
   .header-button a {
     margin-top: 10px;
     display: inline-block;
-    background-color: #1f0eb4;
+    background-color: #000000;
     color: #fff;
     padding: 8px 16px;
     text-decoration: none;
-    border-radius: 5px;
+    border: 2px;
+    border-radius: 1rem;
+    border-color: #bbbbbb;
+    border-style: double;
     transition: background-color 0.3s ease;
+  }
+
+  .header-button a:hover {
+    background-color: #555;
   }
   footer {
     background-color: rgba(255, 255, 255, 0.1);
