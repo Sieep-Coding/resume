@@ -219,7 +219,7 @@ body {
 
   .social-icons {
     margin-top: 20px;
-    background-color: #00000000;
+    background-color: #ffffff00;
   }
   
   .social-icons a {
@@ -246,6 +246,16 @@ body {
     opacity: 1;
   }
   
+  .header-button a {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #1f0eb4;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
   footer {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
