@@ -8,33 +8,32 @@ function fetchGitHubRepos() {
     .then(data => {
       const repoContainer = document.querySelector('.github');
       const reposWithDescription = data.filter(repo => repo.description && repo.description.trim() !== "");
-
       reposWithDescription.sort((a, b) => b.stargazers_count - a.stargazers_count);
-
+      
       reposWithDescription.forEach(repo => {
         const repoCard = document.createElement('div');
         repoCard.classList.add('repo-card');
-
+        
         const repoName = document.createElement('h4');
         repoName.textContent = repo.name;
-
+        
         const repoDescription = document.createElement('p');
         repoDescription.textContent = repo.description;
-
+        
         const repoStars = document.createElement('p');
         repoStars.classList.add('repo-stars');
-        repoStars.textContent = `Stars: ${repo.stargazers_count}`;
-
+        repoStars.textContent = `⭐: ${repo.stargazers_count} 🍴: ${repo.forks_count}`;
+        
         const repoLink = document.createElement('a');
         repoLink.href = repo.html_url;
         repoLink.target = '_blank';
         repoLink.textContent = 'View on GitHub';
-
+        
         repoCard.appendChild(repoName);
         repoCard.appendChild(repoDescription);
         repoCard.appendChild(repoStars);
         repoCard.appendChild(repoLink);
-
+        
         repoContainer.appendChild(repoCard);
       });
     })
