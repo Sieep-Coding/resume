@@ -7,7 +7,7 @@ function fetchGitHubRepos() {
     .then(response => response.json())
     .then(data => {
       const repoContainer = document.querySelector('.github');
-      const reposWithDescription = data.filter(repo => repo.description && repo.description.trim() !== "");
+      const reposWithDescription = data.filter(repo => repo.description && repo.description.trim() !== "" && repo.stargazers_count !== 0);
       reposWithDescription.sort((a, b) => b.stargazers_count - a.stargazers_count);
       
       reposWithDescription.forEach(repo => {
