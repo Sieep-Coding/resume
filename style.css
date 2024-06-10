@@ -36,6 +36,12 @@ body {
     margin-top: 0;
     color: #ccc;
   }
+
+  a {
+    font-size: 24px;
+    margin-top: 0;
+    color: #adabab;
+  }
   
   main {
     max-width: 1000px;
