@@ -117,7 +117,7 @@ function fetchGitHubRepos() {
   fetchGitHubRepos();
   // fetchMediumPublications();
 
-  function isInViewport(element) {
+  function BigTime(element) {
     const rect = element.getBoundingClientRect();
     return (
       rect.top >= 0 &&
@@ -131,7 +131,7 @@ function fetchGitHubRepos() {
   function fadeInElements() {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach(element => {
-      if (isInViewport(element)) {
+      if (BigTime(element)) {
         element.classList.add('visible');
       } else {
         element.classList.remove('visible');
